@@ -6,7 +6,7 @@ int suma (int a, int b);
 int resta (int a, int b);
 int multiplicar (int a, int b);
 int dividir (int a, int b);
-
+int factorizar (int a);
 
 int main()
 {
@@ -16,6 +16,8 @@ int main()
   int flag1 = 0;
   int flag2 = 0;
   int resultado;
+  int factNum;
+  int opt;
   char confirm;
 
 
@@ -68,11 +70,9 @@ do {
 
         case 3:
             if (flag1 == 0 || flag2 == 0){
-
                   printf ("Debe ingresar los dos operando para poder sumar!\n");
 
             }else {
-
                 resultado = suma (num1, num2);
                 printf ("\nEl resultado de la suma es: %d\n\n", resultado);
             }
@@ -102,15 +102,35 @@ do {
 
         case 7:
 
-            printf ("\nEl resultado de la FACTORIAL es: %d\n\n", resultado);
+           printf ("Que operando quiere factorizar? \n");
+           printf ("1. %d\n2. %d\nOpcion: ", num1, num2);
+           scanf ("%d", &factNum);
+
+           if (factNum == 1){
+                resultado = factorizar(num1);
+
+           }else if (factNum == 2){
+                resultado = factorizar(num2);
+
+           }else {
+                printf ("Opcion incorrecta!\n");
+
+           }
             system ("pause");
             break;
+
 
 
         case 8:
             printf ("Esta seguro que desea salir? (s/n): ");
             fflush(stdin);
             scanf ("%c", &confirm);
+
+
+        default:
+            printf ("Opcion incorrecta!\n");
+            system("pause");
+            break;
         }
 
 
@@ -158,6 +178,12 @@ int dividir (int a, int b){
     return result;
 }
 
+int factorizar(int a){
 
+    printf ("\nFactorizando numero %d\n", a);
+
+
+
+}
 
 
