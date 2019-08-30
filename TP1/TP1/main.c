@@ -6,7 +6,7 @@ int suma (int a, int b);
 int resta (int a, int b);
 int multiplicar (int a, int b);
 int dividir (int a, int b);
-int factorizar (int a);
+long long factorizar (int a);
 
 int main()
 {
@@ -18,6 +18,7 @@ int main()
   int resultado;
   int factNum;
   int opt;
+  long long resultadoFact;
   char confirm;
 
 
@@ -102,22 +103,10 @@ do {
 
         case 7:
 
-           printf ("Que operando quiere factorizar? \n");
-           printf ("1. %d\n2. %d\nOpcion: ", num1, num2);
-           scanf ("%d", &factNum);
-
-           if (factNum == 1){
-                resultado = factorizar(num1);
-
-           }else if (factNum == 2){
-                resultado = factorizar(num2);
-
-           }else {
-                printf ("Opcion incorrecta!\n");
-
-           }
-            system ("pause");
-            break;
+           resultadoFact = factorizar(num1);
+           printf ("El resultado de %d es: %I64d", num1, resultadoFact);
+           system ("pause");
+           break;
 
 
 
@@ -125,6 +114,7 @@ do {
             printf ("Esta seguro que desea salir? (s/n): ");
             fflush(stdin);
             scanf ("%c", &confirm);
+            break;
 
 
         default:
@@ -178,12 +168,19 @@ int dividir (int a, int b){
     return result;
 }
 
-int factorizar(int a){
 
-    printf ("\nFactorizando numero %d\n", a);
+long long factorizar(int a){
+
+    long long result = 1;
+
+    for (int i = a; i >= 1; i-- ){
+
+    result = result * i;
 
 
+    }
+
+    return result;
 
 }
-
 
