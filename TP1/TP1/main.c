@@ -5,7 +5,7 @@
 int suma (int a, int b);
 int resta (int a, int b);
 int multiplicar (int a, int b);
-int dividir (int a, int b);
+float dividir (float a, float b);
 long long factorizar (int a);
 
 int main()
@@ -16,6 +16,7 @@ int main()
   int flag1 = 0;
   int flag2 = 0;
   int resultado;
+  float resultDiv;
   int factNum;
   int opt;
   long long resultadoFact;
@@ -24,7 +25,8 @@ int main()
 
 do {
     system ("cls");
-    printf ("Bienvenido a calculadora v1.0.\n\n");
+    printf ("|Bienvenido a calculadora v1.0.|\n--------------------------------\n\n");
+
 
     printf ("Ingrese su opcion: \n\n");
 
@@ -63,6 +65,7 @@ do {
             break;
 
         case 2:
+
             printf ("Ingrese el segundo operando: ");
             flag2 ++;
             fflush (stdin);
@@ -70,6 +73,7 @@ do {
             break;
 
         case 3:
+
             if (flag1 == 0 || flag2 == 0){
                   printf ("Debe ingresar los dos operando para poder sumar!\n");
 
@@ -77,26 +81,46 @@ do {
                 resultado = suma (num1, num2);
                 printf ("\nEl resultado de la suma es: %d\n\n", resultado);
             }
-
             system ("pause");
             break;
 
         case 4:
+
+            if (flag1 == 0 || flag2 == 0){
+                  printf ("Debe ingresar los dos operando para poder restar!\n");
+
+            }else {
             resultado = resta (num1, num2);
             printf ("\nEl resultado de la resta es: %d\n\n", resultado);
+            }
             system ("pause");
             break;
 
         case 5:
+
+            if (flag1 == 0 || flag2 == 0){
+                  printf ("Debe ingresar los dos operando para poder multiplicar!\n");
+
+            }else {
             resultado = multiplicar (num1, num2);
             printf ("\nEl resultado de la multiplicacion es: %d\n\n", resultado);
+            }
             system ("pause");
             break;
 
 
         case 6:
-            resultado = dividir (num1, num2);
-            printf ("\nEl resultado de la division es: %d\n\n", resultado);
+
+            if (flag1 == 0 || flag2 == 0){
+                  printf ("Debe ingresar los dos operando para poder dividir!\n");
+
+            }else if (num1 == 0 || num2 == 0){
+                  printf ("No se puede dividir por 0!\n");
+
+            }else {
+            resultDiv = dividir (num1, num2);
+            printf ("\nEl resultado de la division es: %.2f\n\n", resultDiv);
+            }
             system ("pause");
             break;
 
@@ -104,7 +128,9 @@ do {
         case 7:
 
            resultadoFact = factorizar(num1);
-           printf ("El resultado de %d es: %I64d", num1, resultadoFact);
+           printf ("El resultado de %d es: %I64d\n", num1, resultadoFact);
+           resultadoFact = factorizar(num2);
+           printf ("El resultado de %d es: %I64d\n", num2, resultadoFact);
            system ("pause");
            break;
 
@@ -159,13 +185,13 @@ int multiplicar (int a, int b){
 }
 
 
-int dividir (int a, int b){
+float dividir (float a, float b){
 
-    int result;
+    float resultDiv;
 
-    result = a / b;
+    resultDiv = a / b;
 
-    return result;
+    return resultDiv;
 }
 
 
@@ -175,7 +201,7 @@ long long factorizar(int a){
 
     for (int i = a; i >= 1; i-- ){
 
-    result = result * i;
+    result *= i;
 
 
     }
