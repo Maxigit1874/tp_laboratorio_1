@@ -1,11 +1,16 @@
 # depslib dependency file v1.0
-1567131117 source:c:\users\maxi_\desktop\tp_laboratorio_1\tp1\tp1\main.c
+1567475625 source:c:\users\maxi_\desktop\tp_laboratorio_1\tp1\tp1\main.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
+	"capdevila.h"
 
 1567005375 source:c:\users\alumno\desktop\tp_laboratorio_1\tp1\tp1\main.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
+
+1567473683 source:c:\users\maxi_\desktop\tp_laboratorio_1\tp1\tp1\capdevila.c
+
+1567473638 c:\users\maxi_\desktop\tp_laboratorio_1\tp1\tp1\capdevila.h
 
