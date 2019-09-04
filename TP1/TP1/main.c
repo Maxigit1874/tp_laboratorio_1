@@ -122,13 +122,29 @@ do {
 
         case 7:
 
+           if (flag1 == 0){
+
+                printf ("No hay primer operando para calcular.\n");
+
+           }else {
+
            resultadoFact = factorizar(num1);
            printf ("El factorial de %d es: %I64d\n", num1, resultadoFact);
+
+           }
+
+           if (flag2 == 0){
+
+                printf ("No hay segundo operando para calcular.\n");
+
+           }else {
+
            resultadoFact = factorizar(num2);
            printf ("El factorial de %d es: %I64d\n", num2, resultadoFact);
-           system ("pause");
-           break;
 
+           }
+           system("pause");
+           break;
 
 
         case 8:
