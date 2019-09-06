@@ -70,7 +70,7 @@ do {
         case 3:
 
             if (flag1 == 0 || flag2 == 0){
-                  printf ("Debe ingresar los dos operando para poder sumar!\n");
+                  printf ("Debe ingresar los dos operandos para poder sumar!\n");
 
             }else {
                 resultado = suma (num1, num2);
@@ -82,7 +82,7 @@ do {
         case 4:
 
             if (flag1 == 0 || flag2 == 0){
-                  printf ("Debe ingresar los dos operando para poder restar!\n");
+                  printf ("Debe ingresar los dos operandos para poder restar!\n");
 
             }else {
             resultado = resta (num1, num2);
@@ -94,7 +94,7 @@ do {
         case 5:
 
             if (flag1 == 0 || flag2 == 0){
-                  printf ("Debe ingresar los dos operando para poder multiplicar!\n");
+                  printf ("Debe ingresar los dos operandos para poder multiplicar!\n");
 
             }else {
             resultado = multiplicar (num1, num2);
@@ -107,7 +107,7 @@ do {
         case 6:
 
             if (flag1 == 0 || flag2 == 0){
-                  printf ("Debe ingresar los dos operando para poder dividir!\n");
+                  printf ("Debe ingresar los dos operandos para poder dividir!\n");
 
             }else if (num1 == 0 || num2 == 0){
                   printf ("No se puede dividir por 0!\n");
