@@ -1,0 +1,38 @@
+# depslib dependency file v1.0
+1573130075 source:c:\users\maxi_\desktop\tp3\tp3\win_64\employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Employee.h"
+
+1572954907 c:\users\maxi_\desktop\tp3\tp3\win_64\employee.h
+
+1573130077 source:c:\users\maxi_\desktop\tp3\tp3\win_64\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+
+1533133022 c:\users\maxi_\desktop\tp3\tp3\win_64\linkedlist.h
+
+1572823556 c:\users\maxi_\desktop\tp3\tp3\win_64\controller.h
+
+1573092334 source:c:\users\maxi_\desktop\tp3\tp3\win_64\parser.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+	"parser.h"
+	"Employee.h"
+
+1533133022 c:\users\maxi_\desktop\tp3\tp3\win_64\parser.h
+
+1573129807 source:c:\users\maxi_\desktop\tp3\tp3\win_64\controller.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+	"parser.h"
+	"Employee.h"
+
